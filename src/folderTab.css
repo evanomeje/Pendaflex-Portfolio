@@ -1,0 +1,212 @@
+.folder-tab {
+    position: absolute;
+    width: 800px;
+    background: #f0f0f0;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    padding-top: 25px;
+    transition: all 0.3s ease;
+    
+  }
+  
+  .folder-tab:hover {
+    transform: translateY(-5px);
+  }
+  
+  .folder-tab.active {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* LETTER ORDER TAB*/
+  .folder-label {
+    position: absolute;
+    top: -45px;
+    left: 10px;
+    background: black;
+    color: white; /* text color */
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 200px;
+    height: 40px;
+    transform: perspective(10px) rotateX(1deg);
+  }
+  
+  /*Main  Pendaflex-style tab */
+  .lux-folder-label {
+    position: absolute;
+    top: -47px;
+    /*left: 60px; */
+    background: #f0f0f0;
+    color: black;
+    padding: 5px 15px;
+    font-size: 14px;
+    
+    width: 159px;
+    height: 30.5px;
+    z-index: 3;
+    transform: perspective(10px) rotateX(1deg);
+    
+    border: 3px solid black;
+    /*border-bottom: none;*/
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: none;
+
+    padding: 5px 15px; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Create the rounded connections at the bottom corners of the tab */
+  .lux-folder-label:before,
+  .lux-folder-label:after {
+    content: "";
+    position: absolute;
+    bottom: -10px; 
+    width: 10px;
+    top: 50%;
+    height: 20px;
+    border: 3px solid black;
+    border-radius: 0;
+    z-index: 0;
+    background: #f0f0f0;
+  }
+  
+  /* Left connector square */
+  .lux-folder-label:before {
+    left: -13px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 15px;
+    background-color: transparent;
+  }
+  
+  /* Right connector square */
+  .lux-folder-label:after {
+    right: -13px;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 95px;
+    background-color: transparent;
+  }
+  
+  /* Create the circles that form the outward curve */
+ .lux-folder-label .lux-tab-hook:before,
+.lux-folder-label .lux-tab-hook:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 18px;
+    height: 100px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    z-index: 6;
+  }
+  
+  
+  .lux-folder-label .lux-tab-hook:before {
+    left: -1px;
+    
+  }
+  
+
+.lux-folder-label .lux-tab-hook:after {
+    right: -1px;
+  }
+  
+  .folder-items {
+    padding: 20px;
+    font-size: 14px;
+    color: #f0f0f0;
+    margin-top: 10px;
+  }
+
+
+ /* FOR PERFECTING THE CURVE*/
+.lux-dashed-line,
+.lux-line {
+  position: absolute;
+  top: -3px;
+  left: 50px;
+  width: 25%; 
+  box-shadow: none; 
+}
+
+ /* FOR PERFECTING THE CURVE*/
+.lux-dashed-line {
+  border-bottom: 33px solid  transparent; 
+  border-top-left-radius: 28px;
+  border-top-right-radius: 38px;
+  top: -20px;
+  width: 210px;
+}
+
+ /* FOR PERFECTING THE CURVE*/
+.lux-line {
+  border-bottom: 33px solid #f0f0f0; 
+  border-radius: 90px;
+  top: -7px;
+}
+
+ /* FOR PERFECTING THE CURVE*/
+.lux-dot-wrapper {
+  position: absolute;
+  top: 33px;   
+  left: 2px;
+  width: 98%;
+  pointer-events: none; 
+  z-index: 9999;
+}
+
+ /* FOR PERFECTING THE CURVE*/
+.lux-dot {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #f0f0f0;
+  position: absolute;
+}
+
+
+ /* FOR PERFECTING THE CURVE*/
+.left-dot {
+  left: -6px;   
+}
+
+ /* FOR PERFECTING THE CURVE*/
+.right-dot {
+  right: -6px;  
+}
+
+.bottom-tab-branding {
+  position: absolute;
+  top:-50px;
+  left: 60px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none;
+  z-index: 10;
+ transition: all 0.2s ease;
+}
+
+.bottom-tab-logo {
+  height: 280px; 
+  width: auto;
+      transition: all 0.3s ease;
+}
+
+.bottom-tab-text {
+  font-size: 34px;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease; 
+}
+
+
