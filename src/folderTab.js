@@ -97,7 +97,7 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
     //  transition: 'all 0.4s ease' 
       }}
     >
-      * Evan's Secret Files
+    Evan's Secret Files
     </div>
   </div>
 )}
