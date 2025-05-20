@@ -6,6 +6,7 @@ import './App.css';
 //import visualAudioGif from './gifs/visual-audio.gif';
 import albumBrowserGif from './gifs/album-browser.gif'
 import visualAudioGif from './gifs/visual-audio.gif'
+import digitalSignature from './gifs/digital-signature.gif'
 
 const folderData = [
   { 
@@ -36,7 +37,7 @@ const folderData = [
     lux: true, 
     tabPosition: 1,
     projectData: {
-      gifUrl: null, // Using imported local GIF
+      gifUrl: digitalSignature, // Using imported local GIF
       projectUrl: "https://your-signature-project.com",
       githubUrl: "https://github.com/yourusername/signature",
       processNote: "Built a digital signature application with secure authentication."
