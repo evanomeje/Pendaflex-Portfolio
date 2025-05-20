@@ -5,6 +5,7 @@ import './App.css';
 // Import your local GIF files (assuming they're in a 'gifs' folder)
 //import visualAudioGif from './gifs/visual-audio.gif';
 import albumBrowserGif from './gifs/album-browser.gif'
+import visualAudioGif from './gifs/visual-audio.gif'
 
 const folderData = [
   { 
@@ -61,7 +62,7 @@ const folderData = [
     lux: true, 
     tabPosition: 1,
     projectData: {
-      gifUrl: null, // Using imported local GIF
+      gifUrl: visualAudioGif, // Using imported local GIF
       projectUrl: "https://visual-audio.vercel.app/",
       githubUrl: "https://github.com/evanomeje/Visual-Audio",
       processNote: "Inpsired by my fav dj set. AI did the WebGL heavy lifting"
