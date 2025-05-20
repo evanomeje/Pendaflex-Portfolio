@@ -2,18 +2,84 @@ import React, { useState } from 'react';
 import FolderTab from './folderTab';
 import './App.css';
 
+// Import your local GIF files (assuming they're in a 'gifs' folder)
+import visualAudioGif from './gifs/visual-audio.gif';
+import albumBrowserGif from './gifs/album-browser.gif'
+
 const folderData = [
-  { label: "O", number: "010", items: ["oil lamp", "pants", "plant 003", "orange juice", "oval mirror", "oscillator", "oak frame"], lux: true, tabPosition: 0 },
-  { label: "P", number: "012", items: ["polisher", "piano", "pencil", "paper clip", "printer", "poster", "painting"], lux: false, tabPosition: 0  },
-  { label: "Q", number: "005", items: ["quiet", "questions", "quiz", "quartz", "quill", "quotations"], lux: true, tabPosition: 1  },
-  { label: "R", number: "002", items: ["rum", "rain", "ruby", "radio", "rocket", "ruler", "roses"], lux: false, tabPosition: 0  },
-  { label: "S", number: "002", items: ["sony", "sun", "sims", "stereo", "scissors", "stamp", "steel"], lux: true, tabPosition: 1  },
-  { label: "F", number: "Fav Song", items: ["ony", "un", "ims", "tereo", "cissors", "tamp", "sel"], lux: true, tabPosition: 1  }
+  { 
+    label: "RESUME", 
+    number: "000", 
+    items: [""], 
+    lux: false, 
+    tabPosition: 0,
+    projectData: null 
+  },
+  { 
+    label: "003", 
+    number: "Video2ASCII", 
+    items: [""], 
+    lux: true, 
+    tabPosition: 0,
+    projectData: {
+      gifUrl: null, // Using imported local GIF
+      projectUrl: "https://your-video2ascii-project.com",
+      githubUrl: "https://github.com/yourusername/video2ascii",
+      processNote: "Developed a tool that converts video files into ASCII art animations."
+    }
+  },
+  { 
+    label: "002", 
+    number: "Signature", 
+    items: [""], 
+    lux: true, 
+    tabPosition: 1,
+    projectData: {
+      gifUrl: null, // Using imported local GIF
+      projectUrl: "https://your-signature-project.com",
+      githubUrl: "https://github.com/yourusername/signature",
+      processNote: "Built a digital signature application with secure authentication."
+    }
+  },
+  { 
+    label: "001", 
+    number: "Music-Browser", 
+    items: [""], 
+    lux: true, 
+    tabPosition: 0,
+    projectData: {
+      gifUrl: albumBrowserGif, // Using imported local GIF
+      projectUrl: "https://your-music-browser.com",
+      githubUrl: "https://github.com/evanomeje/Music-Browser",
+      processNote: "Created this music browser to practice ui/ux design"
+    }
+  },
+  { 
+    label: "000", 
+    number: "Visual-Audio", 
+    items: [""], 
+    lux: true, 
+    tabPosition: 1,
+    projectData: {
+      gifUrl: visualAudioGif, // Using imported local GIF
+      projectUrl: "https://visual-audio.vercel.app/",
+      githubUrl: "https://github.com/evanomeje/Visual-Audio",
+      processNote: "Inpsired by my fav dj set. AI did the WebGL heavy lifting"
+    }
+  },
+  { 
+    label: "Projects", 
+    number: "003", 
+    items: ["ony", "un", "ims", "tereo", "cissors", "tamp", "sel"], 
+    lux: false, 
+    tabPosition: 0,
+    projectData: null
+  }
 ];
 
 function App() {
   const [activeTab, setActiveTab] = useState(folderData.length - 1);
-  
+
   const handleTabClick = (index) => {
     if (activeTab === index && index !== folderData.length - 1) {
       setActiveTab(folderData.length - 1);
@@ -23,25 +89,24 @@ function App() {
   };
 
   return (
-  <div className="App-wrapper">
-    <div className="App">
-      <h1>Pendaflex-Style Folder Tabs</h1>
-      <div className="folder-stack">
-        {folderData.map((tab, i) => (
-          <FolderTab 
-            key={i}
-            {...tab}
-            index={i}
-            totalTabs={folderData.length}
-            isActive={activeTab === i}
-            onClick={() => handleTabClick(i)}
-          />
-        ))}
+    <div className="App-wrapper">
+      <div className="App">
+        <h1>Pendaflex-Style Folder Tabs</h1>
+        <div className="folder-stack">
+          {folderData.map((tab, i) => (
+            <FolderTab
+              key={i}
+              {...tab}
+              index={i}
+              totalTabs={folderData.length}
+              isActive={activeTab === i}
+              onClick={() => handleTabClick(i)}
+            />
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 }
 
 export default App;

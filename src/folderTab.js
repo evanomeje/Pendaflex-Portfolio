@@ -2,17 +2,15 @@ import React from 'react';
 import './folderTab.css';
 import CorpLogo from '../src/corp-logo.png';
 
-const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalTabs }) => {
+const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalTabs, projectData }) => {
   const numA = 15;
   const numB = 3;
   const zIndex = numA - numB;
   const baseColor = '#f0f0f0';
-
-  const tabPositions = [60, 275, 100, 950, 400];
+  const tabPositions = [60, 275, 100, 50, 400];
   const labelLeft = lux
     ? tabPositions[index % tabPositions.length]
     : tabPositions[(index + 8) % tabPositions.length] + 20;
-
   const isBottomTab = index === totalTabs - 1;
 
   return (
@@ -23,11 +21,10 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
         top: `${index * 30}px`,
         backgroundColor: baseColor,
         minHeight: isActive ? '300px' : '40px',
-        transform: isActive 
-          ? (isBottomTab ? 'translateY(0)' : 'translateY(-200px)') 
+        transform: isActive
+          ? (isBottomTab ? 'translateY(0)' : 'translateY(-200px)')
           : 'none',
         cursor: 'pointer',
-        
       }}
       onClick={onClick}
     >
@@ -66,41 +63,74 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
         </>
       )}
 
-      <div className="folder-items">
-        {items.map((item, i) => (
-          <div key={i}>{item}</div>
-        ))}
-      </div>
-
+      {/* Content area - only show if active and not the bottom tab */}
+      {isActive && !isBottomTab && (
+        <div className="folder-content">
+          {projectData ? (
+            <div className="project-display">
+              <div className="project-preview">
+                <div 
+                  className="gif-container"
+                  onClick={() => window.open(projectData.projectUrl, '_blank')}
+                >
+                  <img 
+                    src={projectData.gifUrl} 
+                    alt={`${label} preview`}
+                    className="project-gif"
+                  />
+                  <div className="gif-overlay">
+                    <span>VIEW PROJECT</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="project-info">
+                <div className="process-note">
+                  <h3>Process Note</h3>
+                  <p>{projectData.processNote}</p>
+                </div>
+                <button 
+                  className="source-code-btn"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(projectData.githubUrl, '_blank');
+                  }}
+                >
+                  Source Code
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="folder-items">
+              {items.map((item, i) => (
+                <div key={i}>{item}</div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {isBottomTab && (
-  <div 
-    className="bottom-tab-branding"
-    style={{
-      transform: isActive ? 'translateY(30px)' : 'translateY(0)',
-   // transition: 'transform 0.4s ease'
-    }}
-  >
-    <img
-      src={CorpLogo}
-      alt="Corp Logo"
-      className="bottom-tab-logo"
-      style={{ 
-        height: '280px', 
-        width: 'auto',
-    //  transition: 'all 0.4s ease' 
-      }}
-    />
-    <div 
-      className="bottom-tab-text"
-      style={{
-    //  transition: 'all 0.4s ease' 
-      }}
-    >
-    Evan's Secret Files
-    </div>
-  </div>
-)}
+        <div
+          className="bottom-tab-branding"
+          style={{
+            transform: isActive ? 'translateY(30px)' : 'translateY(0)',
+          }}
+        >
+          <img
+            src={CorpLogo}
+            alt="Corp Logo"
+            className="bottom-tab-logo"
+            style={{
+              height: '280px',
+              width: 'auto',
+            }}
+          />
+          <div className="bottom-tab-text">
+            Evan's Secret Files
+          </div>
+        </div>
+      )}
     </div>
   );
 };
