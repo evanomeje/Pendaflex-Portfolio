@@ -149,7 +149,7 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
             }}
           />
           <div className="bottom-tab-text">
-            Chima's Secret Files
+            Evan's Secret Files
           </div>
         </div>
       )}
