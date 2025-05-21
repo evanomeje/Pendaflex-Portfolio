@@ -96,7 +96,7 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
                     window.open(projectData.githubUrl, '_blank');
                   }}
                 >
-                  Source Code
+                  &lt;/sourceCode&gt;
                 </button>
               </div>
             </div>

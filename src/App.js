@@ -7,6 +7,7 @@ import './App.css';
 import albumBrowserGif from './gifs/album-browser.gif'
 import visualAudioGif from './gifs/visual-audio.gif'
 import digitalSignature from './gifs/digital-signature.gif'
+import Video2ASCII from './gifs/video2ascii.gif'
 
 const folderData = [
   { 
@@ -24,7 +25,7 @@ const folderData = [
     lux: true, 
     tabPosition: 0,
     projectData: {
-      gifUrl: null, // Using imported local GIF
+      gifUrl: Video2ASCII, // Using imported local GIF
       projectUrl: "https://your-video2ascii-project.com",
       githubUrl: "https://github.com/yourusername/video2ascii",
       processNote: "Developed a tool that converts video files into ASCII art animations."
