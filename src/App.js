@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import FolderTab from './folderTab';
 import './App.css';
+import { Analytics } from '@vercel/analytics/react'; 
 
 
-import albumBrowserGif from './gifs/album-browser.gif'
-import visualAudioGif from './gifs/visual-audio.gif'
-import digitalSignature from './gifs/digital-signature.gif'
-import Video2ASCII from './gifs/video2ascii.gif'
+import albumBrowserGif from './gifs/album-browser-opt.gif'
+import visualAudioGif from './gifs/visual-audio-opt.gif'
+import digitalSignature from './gifs/digital-signature-opt.gif'
+import Video2ASCII from './gifs/video2ascii-opt.gif'
 
 import resumeSticker from './stickers/resume.png'
 import linkdenSticker from './stickers/linkden.png'
@@ -121,6 +122,7 @@ function App() {
           ))}
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
