@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import FolderTab from './folderTab';
 import './App.css';
 
-// Import your local GIF files (assuming they're in a 'gifs' folder)
-//import visualAudioGif from './gifs/visual-audio.gif';
+
 import albumBrowserGif from './gifs/album-browser.gif'
 import visualAudioGif from './gifs/visual-audio.gif'
 import digitalSignature from './gifs/digital-signature.gif'

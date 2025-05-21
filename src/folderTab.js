@@ -20,9 +20,9 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
         zIndex,
         top: `${index * 30}px`,
         backgroundColor: baseColor,
-        minHeight: isActive ? '300px' : '40px',
+        minHeight: isActive ? '300px' : '150px',
         transform: isActive
-          ? (isBottomTab ? 'translateY(0)' : 'translateY(-200px)')
+          ? (isBottomTab ? 'translateY(0px)' : 'translateY(-200px)')
           : 'none',
         cursor: 'pointer',
       }}
@@ -114,7 +114,7 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
         <div
           className="bottom-tab-branding"
           style={{
-            transform: isActive ? 'translateY(30px)' : 'translateY(0)',
+            transform: isActive ? 'translateY(30px)' : 'translateY(0px)',
           }}
         >
           <img
