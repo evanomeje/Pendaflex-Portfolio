@@ -8,14 +8,23 @@ import visualAudioGif from './gifs/visual-audio.gif'
 import digitalSignature from './gifs/digital-signature.gif'
 import Video2ASCII from './gifs/video2ascii.gif'
 
+import resumeSticker from './stickers/resume.png'
+import linkdenSticker from './stickers/linkden.png'
+import githubSticker from './stickers/github.png'
+
 const folderData = [
-  { 
+ { 
     label: "RESUME", 
     number: "000", 
     items: [""], 
     lux: false, 
     tabPosition: 0,
-    projectData: null 
+    projectData: null,
+    sticker: [
+      { image: resumeSticker, url: "https://your-resume-link.com" },
+      { image: linkdenSticker, url: "https://www.linkedin.com/in/evan-omeje-7a2880231/" },
+      { image: githubSticker, url: "https://github.com/evanomeje" }
+    ]
   },
   { 
     label: "003", 
@@ -25,10 +34,11 @@ const folderData = [
     tabPosition: 0,
     projectData: {
       gifUrl: Video2ASCII, // Using imported local GIF
-      projectUrl: "https://your-video2ascii-project.com",
-      githubUrl: "https://github.com/yourusername/video2ascii",
+      projectUrl: "https://github.com/evanomeje/Video2ASCII",
+      githubUrl: "https://github.com/evanomeje/Video2ASCII",
       processNote: "Developed a tool that converts video files into ASCII art animations."
-    }
+    },
+    sticker: null
   },
   { 
     label: "002", 
@@ -38,10 +48,11 @@ const folderData = [
     tabPosition: 1,
     projectData: {
       gifUrl: digitalSignature, // Using imported local GIF
-      projectUrl: "https://your-signature-project.com",
-      githubUrl: "https://github.com/yourusername/signature",
-      processNote: "Built a digital signature application with secure authentication."
-    }
+      projectUrl: "https://digital-signature-bay.vercel.app/",
+      githubUrl: "https://github.com/evanomeje/Digital-Signature",
+      processNote: "Built a digital signature application.Practiced with figma pen"
+    },
+    sticker: null
   },
   { 
     label: "001", 
@@ -51,10 +62,11 @@ const folderData = [
     tabPosition: 0,
     projectData: {
       gifUrl: albumBrowserGif, // Using imported local GIF
-      projectUrl: "https://your-music-browser.com",
+      projectUrl: "https://music-browser-xyz.vercel.app/",
       githubUrl: "https://github.com/evanomeje/Music-Browser",
       processNote: "Created this music browser to practice ui/ux design"
-    }
+    },
+    sticker: null
   },
   { 
     label: "000", 
@@ -67,15 +79,17 @@ const folderData = [
       projectUrl: "https://visual-audio.vercel.app/",
       githubUrl: "https://github.com/evanomeje/Visual-Audio",
       processNote: "Inpsired by my fav dj set. AI did the WebGL heavy lifting"
-    }
+    },
+    sticker: null
   },
   { 
     label: "Projects", 
     number: "003", 
-    items: ["ony", "un", "ims", "tereo", "cissors", "tamp", "sel"], 
+    items: ["", "", "", "", "", "", ""], 
     lux: false, 
     tabPosition: 0,
-    projectData: null
+    projectData: null,
+    sticker: null
   }
 ];
 
@@ -93,7 +107,7 @@ function App() {
   return (
     <div className="App-wrapper">
       <div className="App">
-        <h1>Pendaflex-Style Folder Tabs</h1>
+        <h1>EVAN PROJECT</h1>
         <div className="folder-stack">
           {folderData.map((tab, i) => (
             <FolderTab

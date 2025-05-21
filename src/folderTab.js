@@ -2,7 +2,7 @@ import React from 'react';
 import './folderTab.css';
 import CorpLogo from '../src/corp-logo.png';
 
-const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalTabs, projectData }) => {
+const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalTabs, projectData, sticker }) => {
   const numA = 15;
   const numB = 3;
   const zIndex = numA - numB;
@@ -28,6 +28,28 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
       }}
       onClick={onClick}
     >
+      {/* sticker container - positioned top right */}
+      {sticker && (
+        <div className="sticker-container">
+          {sticker.map((sticker, i) => (
+            <a 
+              key={i}
+              href={sticker.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="sticker-link"
+            >
+              <img 
+                src={sticker.image} 
+                alt="sticker" 
+                className="sticker"
+              />
+            </a>
+          ))}
+        </div>
+      )}
+
       {lux ? (
         <div
           className="lux-folder-label"
@@ -127,7 +149,7 @@ const FolderTab = ({ label, number, items, index, lux, isActive, onClick, totalT
             }}
           />
           <div className="bottom-tab-text">
-            Evan's Secret Files
+            Chima's Secret Files
           </div>
         </div>
       )}
