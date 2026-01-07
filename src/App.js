@@ -9,20 +9,20 @@ import visualAudioGif from './gifs/visual-audio-opt.gif'
 import digitalSignature from './gifs/digital-signature-opt.gif'
 import Video2ASCII from './gifs/video2ascii-opt.gif'
 
-import resumeSticker from './stickers/resume.png'
-import linkdenSticker from './stickers/linkden.png'
-import githubSticker from './stickers/github.png'
+/*import resumeSticker from './stickers/resume.png'*/
+import linkdenSticker from './stickers/linkedin-outline.svg'
+import githubSticker from './stickers/github-outline.svg'
 
 const folderData = [
  { 
-    label: "RESUME", 
+    label: "DATA", 
     number: "000", 
     items: [""], 
     lux: false, 
     tabPosition: 0,
     projectData: null,
     sticker: [
-      { image: resumeSticker, url: "https://www.dropbox.com/scl/fi/r7yx1r04kooaqrmompzsq/Evan-Omeje-Resume.pdf?rlkey=i11546ugh2hem73bcptyj2aav&st=l4b2sgbz&dl=0" },
+      /*{ image: resumeSticker, url: "https://www.dropbox.com/scl/fi/r7yx1r04kooaqrmompzsq/Evan-Omeje-Resume.pdf?rlkey=i11546ugh2hem73bcptyj2aav&st=l4b2sgbz&dl=0" },*/
       { image: linkdenSticker, url: "https://www.linkedin.com/in/evan-omeje-7a2880231/" },
       { image: githubSticker, url: "https://github.com/evanomeje" }
     ]
@@ -37,7 +37,7 @@ const folderData = [
       gifUrl: Video2ASCII, // Using imported local GIF
       projectUrl: "https://github.com/evanomeje/Video2ASCII",
       githubUrl: "https://github.com/evanomeje/Video2ASCII",
-      processNote: "Developed a tool that converts video files into ASCII art animations."
+      processNote: "Wlecome to the matrix"
     },
     sticker: null
   },
@@ -51,7 +51,7 @@ const folderData = [
       gifUrl: digitalSignature, // Using imported local GIF
       projectUrl: "https://digital-signature-bay.vercel.app/",
       githubUrl: "https://github.com/evanomeje/Digital-Signature",
-      processNote: "Built a digital signature application.Practiced with figma pen"
+      processNote: "What if your digital signature actually looked like signature????"
     },
     sticker: null
   },
@@ -65,7 +65,7 @@ const folderData = [
       gifUrl: albumBrowserGif, // Using imported local GIF
       projectUrl: "https://music-browser-xyz.vercel.app/",
       githubUrl: "https://github.com/evanomeje/Music-Browser",
-      processNote: "Created this music browser to practice ui/ux design"
+      processNote: "What I would create if I ran spotify headquater"
     },
     sticker: null
   },
@@ -79,7 +79,7 @@ const folderData = [
       gifUrl: visualAudioGif, // Using imported local GIF
       projectUrl: "https://visual-audio.vercel.app/",
       githubUrl: "https://github.com/evanomeje/Visual-Audio",
-      processNote: "Inpsired by my fav dj set. AI did the WebGL heavy lifting"
+      processNote: "Make something unhinge and cool, that could get me into Berghain"
     },
     sticker: null
   },
