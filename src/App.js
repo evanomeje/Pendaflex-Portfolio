@@ -4,12 +4,12 @@ import './App.css';
 import { Analytics } from '@vercel/analytics/react'; 
 
 
-import albumBrowserGif from './gifs/album-browser-opt.gif'
-import visualAudioGif from './gifs/visual-audio-opt.gif'
-import digitalSignature from './gifs/digital-signature-opt.gif'
-import Video2ASCII from './gifs/video2ascii-opt.gif'
+import albumBrowserGif from './gifs/music.png'
+import visualAudioGif from './gifs/audio-screenshot.png'
+import digitalSignature from './gifs/sign.png'
+import Video2ASCII from './gifs/ascii.png'
 
-import resumeSticker from './stickers/resume.png'
+/*import resumeSticker from './stickers/resume.png'*/
 import linkdenSticker from './stickers/linkedin-outline.svg'
 import githubSticker from './stickers/github-outline.svg'
 
@@ -22,7 +22,7 @@ const folderData = [
     tabPosition: 0,
     projectData: null,
     sticker: [
-      {image: resumeSticker, url: "https://www.dropbox.com/scl/fi/r7yx1r04kooaqrmompzsq/Evan-Omeje-Resume.pdf?rlkey=i11546ugh2hem73bcptyj2aav&st=l4b2sgbz&dl=0" },
+      /*{image: resumeSticker, url: "https://www.dropbox.com/scl/fi/r7yx1r04kooaqrmompzsq/Evan-Omeje-Resume.pdf?rlkey=i11546ugh2hem73bcptyj2aav&st=l4b2sgbz&dl=0" },*/
       { image: linkdenSticker, url: "https://www.linkedin.com/in/evan-omeje-7a2880231/" },
       { image: githubSticker, url: "https://github.com/evanomeje" }
     ]
