@@ -37,7 +37,7 @@ const folderData = [
       gifUrl: Video2ASCII, // Using imported local GIF
       projectUrl: "https://github.com/evanomeje/Video2ASCII",
       githubUrl: "https://github.com/evanomeje/Video2ASCII",
-      processNote: ">> welcome_to_the_matrix █▓▒░  !@#$%"
+      processNote: ">> welcome_to_the_matrix █▓▒░  @#$%"
     },
     sticker: null
   },
